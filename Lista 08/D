@@ -1,0 +1,33 @@
+using System;
+
+namespace Exercicios
+{
+    class Program
+    {
+        public static void Main()
+        {
+        	
+//Desenvolva um programa que solicite ao usuário para inserir um número
+//inteiro positivo e, em seguida, exiba a soma de todos os números entre 1 e o
+//número inserido.
+
+            Console.WriteLine("Digite um número inteiro positivo:");
+            int num = int.Parse(Console.ReadLine());
+            
+            int soma = 0;
+        	
+        	for (int i = 1; i <= num; i++){
+        		
+        		soma += i;
+        		
+        	}
+        	
+        	Console.WriteLine("soma de todos os números entre 1 e " + num);
+        	Console.WriteLine(soma);
+
+            Console.WriteLine("");
+            Console.WriteLine("Pressione qualquer tecla para fechar.");
+            Console.ReadKey();
+        }
+    }
+}
