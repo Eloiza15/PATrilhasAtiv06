@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+
+namespace Exercicios
+{
+    class Program
+    {
+        public static void Main()
+        {
+        	
+//Desenvolva um programa que solicite ao usuário para inserir uma sequência
+//de números inteiros e, em seguida, exiba o maior número inserido.
+
+            List <int> numeros = new List <int>();
+
+            for (;true;)
+            {
+                Console.WriteLine("Digite números ou 'fim' para fechar:");
+                string entrada = Console.ReadLine();
+
+               
+                if (entrada.ToLower() == "fim")
+                {
+                    break; 
+                }
+                
+                int numero = int.Parse(entrada);
+                numeros.Add(numero);
+          }
+            
+            numeros.Sort();
+            
+            Console.WriteLine("O maior número exibido foi: " + numeros[numeros.Count-1]);
+            
+            Console.WriteLine("");
+            Console.WriteLine("Pressione qualquer tecla para fechar.");
+            Console.ReadKey();
+        }
+    }
+}
