@@ -1,0 +1,26 @@
+using System;
+
+namespace Exercicios
+{
+    class Program
+    {
+        public static void Main()
+        {
+        	
+//Crie um programa que exiba a tabuada do número 5 até o número 10.
+
+         Console.WriteLine("Tabuada do 5:");
+
+           for (int i = 0; i <= 10; i++){
+    
+	            int mult = 5*i;
+	
+	     Console.WriteLine("5 * " + i + " = " + mult);
+}
+            
+            Console.WriteLine("");
+            Console.WriteLine("Pressione qualquer tecla para fechar.");
+            Console.ReadKey();
+        }
+    }
+}
