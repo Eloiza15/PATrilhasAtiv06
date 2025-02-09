@@ -1,0 +1,21 @@
+using System; 
+
+public class Exercicios
+{
+    public static void Main()
+    {
+    	
+    //Crie um vetor de inteiros e encontre o maior valor no vetor.
+    
+    int[] numeros = {45, 67, 100, 245, 8};
+     
+    Array.Sort(numeros);
+    
+    	Console.WriteLine("O maior número do vetor é: " + numeros[numeros.Length-1]);
+      
+
+    	Console.WriteLine("");
+        Console.WriteLine("Pressione qualquer tecla para fechar.");
+        Console.ReadKey();
+    }
+}
