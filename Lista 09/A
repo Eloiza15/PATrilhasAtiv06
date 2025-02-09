@@ -1,0 +1,19 @@
+using System; 
+
+public class Exercicios
+{
+    public static void Main()
+    {
+    	//Crie um vetor de inteiros e imprima na tela o valor de cada elemento do vetor.
+    	
+    	int[] inteiros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    	
+    	for ( int i = 0; i < inteiros.Length; i++) {
+    		Console.WriteLine ("Elemento " + i + ": " + inteiros[i]);
+    	}
+    		
+        Console.WriteLine("");
+        Console.WriteLine("Pressione qualquer tecla para fechar.");
+        Console.ReadKey();
+    }
+}
