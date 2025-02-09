@@ -1,0 +1,26 @@
+using System; 
+
+public class Exercicios
+{
+    public static void Main()
+    {
+    	
+    //Crie um vetor de números decimais e calcule a média dos valores do vetor.
+    
+    decimal[] numeros = { 3.14m, 45.60m, 1.7m, 6.9m, 3.2m };
+    decimal soma = 0; 
+    
+    for (int i = 0; i < numeros.Length; i++){
+    	
+    	soma += numeros[i];
+    }
+    
+        decimal media = soma/numeros.Length;
+    	
+    	Console.WriteLine("Média dos números decimais do vetor: " + media);
+    	
+    	Console.WriteLine("");
+        Console.WriteLine("Pressione qualquer tecla para fechar.");
+        Console.ReadKey();
+    }
+}
