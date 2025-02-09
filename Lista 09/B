@@ -1,0 +1,41 @@
+using System; 
+
+public class Exercicios
+{
+    public static void Main()
+    {
+//    	Crie um algoritmo que armazene nome e duas notas de 5 alunos e imprima
+//uma listagem contendo nome, as duas notas e a média de cada aluno.
+    	
+int numAlunos = 6;
+    	
+    	string[] nomes = new string[numAlunos]; 
+    	double[] notasUm = new double[numAlunos];
+    	double[] notasDois = new double[numAlunos];
+    	double[] medias = new double[numAlunos];
+    	
+    	for ( int i = 1; i < numAlunos; i++) {
+    		Console.WriteLine ("Digite o nome do " + i + " aluno(a):");
+    		nomes[i] = Console.ReadLine();
+    		
+    		Console.WriteLine("Digite a primeira nota de " + nomes[i] + " :");
+    		notasUm[i] = double.Parse(Console.ReadLine());
+    		
+    		Console.WriteLine("Digite a segunda nota de " + nomes[i] + " :");
+    		notasDois[i] = double.Parse(Console.ReadLine());
+    		
+    		medias[i] = (notasUm[i] + notasDois[i]) /2;
+    	}
+    	
+    	Console.WriteLine("");
+    	Console.WriteLine("Listagem final de alunos e médias:");
+    	for ( int i = 1; i < numAlunos; i++){
+    		
+    		Console.WriteLine (nomes[i] + " - Média: " + medias[i] );
+    	}
+    		
+    	Console.WriteLine("");
+        Console.WriteLine("Pressione qualquer tecla para fechar.");
+        Console.ReadKey();
+    }
+}
