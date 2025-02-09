@@ -1,0 +1,22 @@
+using System; 
+
+public class Exercicios
+{
+    public static void Main()
+    {
+    	
+    //Crie um vetor de inteiros e encontre o menor valor no vetor.
+    
+    int[] numeros = {13, 77, 145, 300, 9};
+     
+    Array.Sort(numeros);
+    Array.Reverse(numeros);
+    
+    	Console.WriteLine("O menor número do vetor é: " + numeros[numeros.Length-1]);
+      
+
+    	Console.WriteLine("");
+        Console.WriteLine("Pressione qualquer tecla para fechar.");
+        Console.ReadKey();
+    }
+}
