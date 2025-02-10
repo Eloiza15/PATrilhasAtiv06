@@ -1,0 +1,41 @@
+using System;
+
+namespace SomaPares
+{
+    class Program
+    {
+        public static void Main()
+        {
+            // Crie um algoritmo que armazene números em dois vetores inteiros de cinco
+            // elementos cada. Gere e imprima o vetor soma.
+            
+            double[] vetorUm = new double[5];
+            double[] vetorDois = new double[5];
+            double[] soma = new double[5]; 
+            
+            Console.WriteLine("Digite os números do vetor 1:");
+            for (int i = 0; i < vetorUm.Length; i++)
+            {
+                vetorUm[i] = double.Parse(Console.ReadLine());
+            }
+            
+            Console.WriteLine("Digite os números do vetor 2:");
+            for (int i = 0; i < vetorDois.Length; i++)  
+            {
+                vetorDois[i] = double.Parse(Console.ReadLine());
+            }
+            
+            for (int i = 0; i < soma.Length; i++)
+            {
+                soma[i] = vetorUm[i] + vetorDois[i];
+                Console.WriteLine("Soma do índice " + i + ": " + soma[i]);
+          
+            }
+            
+             Console.WriteLine("Pressione qualquer tecla para fechar.");
+            Console.ReadKey();
+  
+        }
+        
+    }
+}
