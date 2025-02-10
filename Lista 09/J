@@ -1,0 +1,77 @@
+using System;
+using System.Linq;
+
+namespace SomaPares
+{
+	class Program
+	{
+		public static void Main()
+		{
+//            Um sistema de controle de estoque armazena nome, quantidade em estoque e
+//            preço unitário de 40 mercadorias. Fazer um menu que exiba as seguintes
+//            opções:
+//            MENU
+//            1. Cadastra mercadorias
+//            2. Exibe valor total em mercadorias da empresa
+//            3. Sair
+//            OPÇÃO:
+              
+			string[] nome = new string[40];
+			int[] quantidade = new int[40];
+			double[] preco = new double[40];
+			double[] valorTotal = new double[40];
+              
+			string resposta = "";
+			
+			while (true) {
+			
+              
+				Console.WriteLine("MENU \n1. Cadastra mercadorias \n2. Exibe valor total em mercadorias da empresa \n3. Sair \nOPÇÃO:");
+				string opcao = Console.ReadLine();
+              
+				if (opcao == "1") {
+              	
+					Console.WriteLine("Cadastrar mercadoria");
+              	
+					for (int i = 0; i < 40; i++) {
+              			
+						Console.Write("Digite o nome da mercadoria: ");
+						nome[i] = Console.ReadLine();
+
+						Console.Write("Digite a quantidade em estoque: ");
+						quantidade[i] = int.Parse(Console.ReadLine());
+
+						Console.Write("Digite o preço unitário: ");
+						preco[i] = double.Parse(Console.ReadLine());
+                        
+						Console.WriteLine("Deseja adcionar mais uma mercadoria? (sim ou não)");
+						resposta = Console.ReadLine().ToLower();
+                        
+						if (resposta != "sim") {
+							break;
+						}
+					}
+					
+				} else if (opcao == "2") {
+				
+					double soma = 0;
+				
+					for (int i = 0; i < nome.Length; i++) {
+					
+						valorTotal[i] = quantidade[i] * preco[i];
+					
+						soma += valorTotal[i];
+					}
+					
+					Console.WriteLine("Valor total em mercadorias da empresa: " + soma);
+				
+				} else {
+					break;
+              
+				}
+  
+			}
+        
+		}
+	}
+}
