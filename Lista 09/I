@@ -1,0 +1,34 @@
+using System;
+
+namespace SomaPares
+{
+    class Program
+    {
+        public static void Main()
+        {
+            //Crie um algoritmo que entre com 10 nomes e imprima uma listagem
+            //contendo todos os nomes.
+            
+            string[] nomes = new string[10];
+            
+            Console.WriteLine("Digite dez nomes:");
+            for (int i = 0; i < nomes.Length; i++)
+            {
+                nomes[i] = Console.ReadLine();
+            }
+           
+            Console.WriteLine("Listagem de nomes:");
+            
+            for (int i = 0; i < nomes.Length; i++){
+            	
+             Console.WriteLine(nomes[i]);
+             
+            }
+
+            Console.WriteLine("Pressione qualquer tecla para fechar.");
+            Console.ReadKey();
+  
+        }
+        
+    }
+}
