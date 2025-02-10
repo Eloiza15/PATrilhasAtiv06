@@ -1,0 +1,34 @@
+using System;
+
+namespace SomaPares
+{
+    class Program
+    {
+        public static void Main()
+        {
+            //Crie um vetor de inteiros e ordene os valores do vetor em ordem decrescente.
+            
+            int[] inteiros = new int[5];
+            
+            Console.WriteLine("Digite os números do vetor:");
+            for (int i = 0; i < inteiros.Length; i++)
+            {
+                inteiros[i] = int.Parse(Console.ReadLine());
+            }
+            
+            Array.Sort(inteiros);
+            Array.Reverse(inteiros);
+            
+            Console.WriteLine("Números em ordem decrescente:");
+            foreach (int numero in inteiros)
+            {
+                Console.WriteLine(numero);
+            }
+            
+            Console.WriteLine("Pressione qualquer tecla para fechar.");
+            Console.ReadKey();
+  
+        }
+        
+    }
+}
